@@ -26,7 +26,7 @@ function App() {
     fetchTasks();
   }, []);
   function isTaskCommand(text) {
-    return /\b(create|add|save|make|remind|remember|schedule|plan)\b.*\b(task|reminder|todo|to-do)\b|\b(remind me to|don't let me forget|i need to|i have to|i must|i should|need to|have to|must|should)\b/i.test(text);
+    return /\b(remind me|remind me that|remember to|don't let me forget|add task|create task|make a task|schedule|save task)\b/i.test(text);
   }
   async function sendMessage(text = message) {
     if (!text.trim() || loading) return;
